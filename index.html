@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Victorious Agency | Website Design & Digital Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,400;0,9..144,700;1,9..144,200;1,9..144,400&family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-logo" onclick="showPage('home')">
+    <img src="Brand logo.jpeg" alt="Victorious Agency" />
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a data-page="home"     onclick="showPage('home')"     class="active">Home</a></li>
+    <li><a data-page="projects" onclick="showPage('projects')">Projects</a></li>
+    <li><a data-page="feedback" onclick="showPage('feedback')">Feedback</a></li>
+    <li><a data-page="about"    onclick="showPage('about')">About</a></li>
+    <li><a data-page="contact"  onclick="showPage('contact')">Contact</a></li>
+  </ul>
+  <div class="burger" id="burger" onclick="toggleBurger()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-slides-wrap" id="heroSlides"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-body">
+      <div class="hero-tag" id="heroTag">Website Design & Development</div>
+      <h1 class="hero-headline" id="heroHL">We Build Websites<br>That <em>Convert</em></h1>
+      <p class="hero-sub" id="heroSub">From Shopify stores to fully custom sites, we craft digital experiences that turn visitors into loyal customers.</p>
+      <div class="hero-ctas">
+        <a class="btn-gold" href="#" onclick="showPage('contact'); return false;"><span>Book A Session</span></a>
+        <button class="btn-outline" onclick="showPage('projects')">View Projects</button>
+      </div>
+    </div>
+    <div class="hero-ui">
+      <div class="hero-counter">
+        <span class="hero-counter-num" id="heroNum">01</span>
+        <div class="hero-track"><div class="hero-track-fill" id="heroFill"></div></div>
+        <span class="hero-counter-total">04</span>
+      </div>
+      <div class="hero-arrows">
+        <button class="hero-arr" id="heroPrevBtn">←</button>
+        <button class="hero-arr" id="heroNextBtn">→</button>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-dot"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <div class="mission-section">
+    <div class="mission-left">
+      <span class="eyebrow" style="margin-bottom:1.4rem;display:flex;">Our Mission</span>
+      <h2 class="section-heading">Embark on Your Journey to <em>Digital Triumph</em></h2>
+      <div class="gold-bar" style="margin-top:2rem;margin-bottom:1.5rem;"></div>
+      <p style="color:var(--muted);font-size:.95rem;line-height:1.85;max-width:460px;">We are driven by an unwavering commitment to web design and marketing. Our specialists craft solutions that mesmerize audiences and deliver tangible results, elevating your online presence to new heights.</p>
+    </div>
+    <div class="mission-right">
+      <div>
+        <span class="eyebrow" style="margin-bottom:1rem;display:flex;">By The Numbers</span>
+        <p style="color:var(--muted);font-size:.9rem;max-width:380px;line-height:1.85;">Choosing us means partnering with a dynamic agency with a proven track record in crafting impactful websites, branding strategies, and digital marketing campaigns.</p>
+      </div>
+      <div class="mission-stat-row">
+        <div>
+          <div class="mission-stat-num">55+</div>
+          <div class="mission-stat-label">Loyal Clients</div>
+        </div>
+        <div>
+          <div class="mission-stat-num">100+</div>
+          <div class="mission-stat-label">Projects Done</div>
+        </div>
+        <div>
+          <div class="mission-stat-num">4</div>
+          <div class="mission-stat-label">Team Members</div>
+        </div>
+        <div>
+          <div class="mission-stat-num">3yr</div>
+          <div class="mission-stat-label">In Business</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <div class="services-header">
+      <div>
+        <span class="eyebrow" style="margin-bottom:.8rem;display:flex;">What We Do</span>
+        <h2 class="section-heading">Our <em>Skillset</em></h2>
+      </div>
+      <button class="btn-outline" onclick="showPage('contact')">Hire Us</button>
+    </div>
+    <div class="services-grid" id="servicesGrid">
+
+      <div class="svc-card">
+        <div class="svc-carousel" id="sc-webdev">
+          <div class="svc-label">Web Development</div>
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="sc-webdev">←</button>
+            <button class="svc-arr" data-dir="next" data-id="sc-webdev">→</button>
+          </div>
+          <div class="svc-dots" id="sd-webdev"></div>
+        </div>
+        <div class="svc-info">
+          <div class="svc-num">01</div>
+          <div class="svc-title">Website Development</div>
+          <p class="svc-desc">Entice your target audience with an impeccably designed and seamlessly navigable website that converts visitors into customers.</p>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-carousel" id="sc-graphics">
+          <div class="svc-label">Graphic Design</div>
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="sc-graphics">←</button>
+            <button class="svc-arr" data-dir="next" data-id="sc-graphics">→</button>
+          </div>
+          <div class="svc-dots" id="sd-graphics"></div>
+        </div>
+        <div class="svc-info">
+          <div class="svc-num">02</div>
+          <div class="svc-title">Graphic Design</div>
+          <p class="svc-desc">Elevate your personal and business image with stunning, captivating visual elements — logos, banners, packaging, and more.</p>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-carousel" id="sc-marketing">
+          <div class="svc-label">Digital Marketing</div>
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="sc-marketing">←</button>
+            <button class="svc-arr" data-dir="next" data-id="sc-marketing">→</button>
+          </div>
+          <div class="svc-dots" id="sd-marketing"></div>
+        </div>
+        <div class="svc-info">
+          <div class="svc-num">03</div>
+          <div class="svc-title">Digital Marketing</div>
+          <p class="svc-desc">Capture the attention of your key audience with dynamic marketing services — PPC, social media, email, and content strategy.</p>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-carousel" id="sc-ranking">
+          <div class="svc-label">SEO & Rankings</div>
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="sc-ranking">←</button>
+            <button class="svc-arr" data-dir="next" data-id="sc-ranking">→</button>
+          </div>
+          <div class="svc-dots" id="sd-ranking"></div>
+        </div>
+        <div class="svc-info">
+          <div class="svc-num">04</div>
+          <div class="svc-title">Website Ranking</div>
+          <p class="svc-desc">Amplify visibility and attract clients with tailored content — from blogs to conversion-focused landing pages designed to rank.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <div class="featured-header">
+      <div>
+        <span class="eyebrow" style="margin-bottom:.8rem;display:flex;">Portfolio</span>
+        <h2 class="section-heading">Highlighted <em>Works</em></h2>
+      </div>
+      <button class="btn-outline" onclick="showPage('projects')">All Projects →</button>
+    </div>
+    <div class="feat-carousel" id="featCarousel">
+      <div class="feat-overlay"></div>
+      <div class="feat-caption" id="featCaption">Shopify <em>Design</em></div>
+      <div class="feat-controls" id="featDots"></div>
+    </div>
+  </section>
+
+  <div class="why-section">
+    <div class="why-text-col">
+      <span class="eyebrow" style="margin-bottom:1.2rem;display:flex;">Why Choose Us</span>
+      <h2 class="section-heading" style="font-size:clamp(1.8rem,3.5vw,2.8rem);">Your Trusted Partners for Digital Growth</h2>
+      <div class="gold-bar" style="margin:1.8rem 0;"></div>
+      <p style="color:var(--muted);font-size:.9rem;line-height:1.9;">You do not have to navigate business growth alone. Opt for us as your dedicated outsourced marketing team. We are committed to delivering excellence.</p>
+      <ul class="why-list">
+        <li>Stunning New Website Design</li>
+        <li>Compelling Branding Solutions</li>
+        <li>A results-driven marketing team</li>
+      </ul>
+      <a class="btn-gold" onclick="showPage('contact')"><span>Get In Touch</span></a>
+    </div>
+    <div class="why-imgs-col">
+      <div class="why-img-item"><img src="team.png" alt="Work" /></div>
+      <div class="why-img-item"><img src="team2.png" alt="Work" /></div>
+      <div class="why-img-item"><img src="team3.png" alt="Work" /></div>
+      <div class="why-img-item"><img src="team4.png" alt="Work" /></div>
+    </div>
+  </div>
+
+</div><div class="page" id="page-projects">
+
+  <div class="proj-page-hero">
+    <div class="proj-hero-slides" id="projHeroSlides"></div>
+    <div class="proj-hero-overlay"></div>
+    <div class="proj-hero-body">
+      <span class="eyebrow" style="margin-bottom:1rem;display:flex;">Our Work</span>
+      <h1 class="section-heading" style="font-size:clamp(3rem,7vw,5.5rem);">Projects <em>Page</em></h1>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--border);">
+    <div style="padding:4rem 3.5rem;border-right:1px solid var(--border);">
+      <span class="eyebrow" style="margin-bottom:1rem;display:flex;">Pursue Your Passions</span>
+      <p style="color:var(--muted);font-size:.95rem;line-height:1.9;">With our expertise, you can concentrate on what you enjoy most while we enhance your online presence. We take care of those persistent marketing tasks.</p>
+    </div>
+    <div style="padding:4rem 3.5rem;background:var(--layer1);">
+      <ul class="why-list" style="margin-top:0;">
+        <li>Gain Flexibility and Reduce Expenses</li>
+        <li>Boost Productivity with Ease</li>
+        <li>Enjoy a Work/Life Balance that Pleases</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="proj-links-section">
+    <span class="eyebrow" style="margin-bottom:.8rem;display:flex;">Live Sites</span>
+    <h2 class="section-heading">Recent <em>Projects</em></h2>
+    <div class="proj-links-grid">
+      <a class="proj-link-item" href="https://cosme-techs.com/" target="_blank"><span class="proj-link-url">cosme-techs.com</span><span class="proj-arrow">↗</span></a>
+      <a class="proj-link-item" href="https://quaintquest.shop/" target="_blank"><span class="proj-link-url">quaintquest.shop</span><span class="proj-arrow">↗</span></a>
+      <a class="proj-link-item" href="https://paragonfaucets.com/" target="_blank"><span class="proj-link-url">paragonfaucets.com</span><span class="proj-arrow">↗</span></a>
+      <a class="proj-link-item" href="https://bearandmeoutdoors.com/" target="_blank"><span class="proj-link-url">bearandmeoutdoors.com</span><span class="proj-arrow">↗</span></a>
+      <a class="proj-link-item" href="https://simplyscentamental.com/" target="_blank"><span class="proj-link-url">simplyscentamental.com</span><span class="proj-arrow">↗</span></a>
+      <a class="proj-link-item" href="https://buzzingbargains.com/" target="_blank"><span class="proj-link-url">buzzingbargains.com</span><span class="proj-arrow">↗</span></a>
+      <a class="proj-link-item" href="https://shopnova.com.au/" target="_blank"><span class="proj-link-url">shopnova.com.au</span><span class="proj-arrow">↗</span></a>
+      <a class="proj-link-item" href="https://saltyjoes.com/" target="_blank"><span class="proj-link-url">saltyjoes.com</span><span class="proj-arrow">↗</span></a>
+    </div>
+  </div>
+
+  <div class="proj-gallery-section">
+    <span class="eyebrow" style="margin-bottom:1rem;display:flex;">Past Works</span>
+    <h2 class="section-heading">Check Out Our <em>Projects</em></h2>
+    <div class="proj-gallery" style="margin-top:2.5rem;">
+      <div class="proj-cell"><img src="FeelinGirl-Project.png" alt="Project"></div>
+      <div class="proj-cell"><img src="project2.jpg" alt="Project"></div>
+      <div class="proj-cell"><img src="project3.png" alt="Project"></div>
+      <div class="proj-cell"><img src="project4.png" alt="Project"></div>
+      <div class="proj-cell"><img src="project5.jpeg" alt="Project"></div>
+      <div class="proj-cell"><img src="project6.png" alt="Project"></div>
+    </div>
+  </div>
+
+  <div class="proj-video-section">
+    <span class="eyebrow" style="margin-bottom:.8rem;display:flex;">Portfolio</span>
+    <h2 class="section-heading">Project <em>Videos</em></h2>
+    <div class="proj-video-grid" style="margin-top:2.5rem;">
+      <div class="proj-video-item">
+        <video width="100%" height="auto" controls>
+          <source src="nuvanibeauty.mp4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="proj-video-item">
+        <video width="100%" height="auto" controls>
+          <source src="Harlow Real estate.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="proj-video-item">
+        <video width="100%" height="auto" controls>
+          <source src="Next finder Realtor.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="proj-video-item">
+        <video width="100%" height="auto" controls>
+          <source src="Sparklewash pro website.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-band">
+    <div class="stat-cell"><div class="stat-big">55+</div><div class="stat-lbl">Loyal Clients</div></div>
+    <div class="stat-cell"><div class="stat-big">100+</div><div class="stat-lbl">Executed Projects</div></div>
+    <div class="stat-cell"><div class="stat-big">4</div><div class="stat-lbl">Team Associates</div></div>
+  </div>
+
+  <div style="padding:5rem 3.5rem;text-align:center;border-top:1px solid var(--border);">
+    <p style="color:var(--muted);font-size:1.05rem;max-width:500px;margin:0 auto 2.2rem;">If your business has you stressed, let us take care of the rest. Always available for you.</p>
+    <a class="btn-gold" href="https://www.fiverr.com/excellences_" target="_blank"><span>Work With Us</span></a>
+  </div>
+
+</div><div class="page" id="page-feedback">
+
+  <div class="fb-hero">
+    <div class="fb-hero-slides" id="fbHeroSlides"></div>
+    <div class="fb-hero-overlay"></div>
+    <div class="fb-hero-body">
+      <span class="eyebrow" style="margin-bottom:1rem;display:flex;">Client Results</span>
+      <h1 class="section-heading" style="font-size:clamp(2.8rem,6vw,5rem);"><em>Feedback</em> & Results</h1>
+    </div>
+  </div>
+
+  <div class="fb-grid-section">
+    <span class="eyebrow" style="margin-bottom:.8rem;display:flex;">Proof of Work</span>
+    <h2 class="section-heading">What We've <em>Achieved</em></h2>
+    <div class="fb-grid" id="fbGrid">
+
+      <div class="fb-card">
+        <div class="fb-card-carousel" id="fc-traffic">
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="fc-traffic">←</button>
+            <button class="svc-arr" data-dir="next" data-id="fc-traffic">→</button>
+          </div>
+          <div class="svc-dots" id="sd-traffic" style="bottom:.7rem;"></div>
+        </div>
+        <div class="fb-card-body"><div class="fb-card-tag">Traffic Growth</div><p class="fb-card-desc">Traffic driven through paid advertising campaigns, exceeding client targets.</p></div>
+      </div>
+
+      <div class="fb-card">
+        <div class="fb-card-carousel" id="fc-seo">
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="fc-seo">←</button>
+            <button class="svc-arr" data-dir="next" data-id="fc-seo">→</button>
+          </div>
+          <div class="svc-dots" id="sd-seo" style="bottom:.7rem;"></div>
+        </div>
+        <div class="fb-card-body"><div class="fb-card-tag">SEO Rankings</div><p class="fb-card-desc">Consistent organic traffic growth from targeted search engine ranking strategies.</p></div>
+      </div>
+
+      <div class="fb-card">
+        <div class="fb-card-carousel" id="fc-merchant">
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="fc-merchant">←</button>
+            <button class="svc-arr" data-dir="next" data-id="fc-merchant">→</button>
+          </div>
+          <div class="svc-dots" id="sd-merchant" style="bottom:.7rem;"></div>
+        </div>
+        <div class="fb-card-body"><div class="fb-card-tag">Google Merchant</div><p class="fb-card-desc">Product listing and verification on Google Merchant Centre for maximum visibility.</p></div>
+      </div>
+
+      <div class="fb-card">
+        <div class="fb-card-carousel" id="fc-ux">
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="fc-ux">←</button>
+            <button class="svc-arr" data-dir="next" data-id="fc-ux">→</button>
+          </div>
+          <div class="svc-dots" id="sd-ux" style="bottom:.7rem;"></div>
+        </div>
+        <div class="fb-card-body"><div class="fb-card-tag">Store UX</div><p class="fb-card-desc">Increased store responsiveness and user-friendliness, boosting conversion rates.</p></div>
+      </div>
+
+      <div class="fb-card">
+        <div class="fb-card-carousel" id="fc-flows">
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="fc-flows">←</button>
+            <button class="svc-arr" data-dir="next" data-id="fc-flows">→</button>
+          </div>
+          <div class="svc-dots" id="sd-review" style="bottom:.7rem;"></div>
+        </div>
+        <div class="fb-card-body"><div class="fb-card-tag">Flows</div><p class="fb-card-desc">Integrate email automations to keep in touch with your customers at all time</p></div>
+      </div>
+
+      <div class="fb-card">
+        <div class="fb-card-carousel" id="fc-review">
+          <div class="svc-arr-wrap">
+            <button class="svc-arr" data-dir="prev" data-id="fc-review">←</button>
+            <button class="svc-arr" data-dir="next" data-id="fc-review">→</button>
+          </div>
+          <div class="svc-dots" id="sd-review" style="bottom:.7rem;"></div>
+        </div>
+        <div class="fb-card-body"><div class="fb-card-tag">Reviews</div><p class="fb-card-desc">What customers see in our brand to make them work and continue working with us.</p></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:5rem 3.5rem;border-top:1px solid var(--border);">
+    <span class="eyebrow" style="margin-bottom:1rem;display:flex;justify-content:center;">Ready to Start?</span>
+    <h2 class="section-heading" style="max-width:540px;margin:0 auto 1.5rem;">Let our specialists <em>lighten your workload</em></h2>
+    <p style="color:var(--muted);max-width:480px;margin:0 auto 2.5rem;font-size:.92rem;">Book a complimentary consultation to determine if we are the ideal partner for your business.</p>
+    <a class="btn-gold" href="https://www.fiverr.com/excellences_" target="_blank"><span>Book Free Consultation</span></a>
+  </div>
+
+</div><div class="page" id="page-about">
+
+  <div class="about-split">
+    <div class="about-left">
+      <span class="eyebrow" style="margin-bottom:1.2rem;display:flex;">Who We Are</span>
+      <h1 class="section-heading" style="font-size:clamp(2.5rem,5vw,4.2rem);">About <em>Us</em></h1>
+      <div class="gold-bar" style="margin:2rem 0;"></div>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.9;margin-bottom:1.8rem;">Welcome to Victorious Agency. Your Pathway to Digital Excellence. At our core, we recognize the vast potential of the digital realm for business growth and success. Our team of creative experts is committed to delivering exceptional website designs and marketing solutions that enhance your online visibility and achieve tangible results.</p>
+      <div class="about-founded">
+        <div>
+          <div class="about-year">2023</div>
+          <div class="about-year-label">Founded</div>
+        </div>
+        <div>
+          <div class="about-year">100+</div>
+          <div class="about-year-label">Projects Done</div>
+        </div>
+        <div>
+          <div class="about-year">55+</div>
+          <div class="about-year-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="about-img-carousel" id="aboutImgCarousel"></div>
+      <div class="about-img-overlay"></div>
+    </div>
+  </div>
+
+  <div class="why-cards-section">
+    <span class="eyebrow" style="margin-bottom:.8rem;display:flex;">Why Partner With Us</span>
+    <h2 class="section-heading">What Sets Us <em>Apart</em></h2>
+    <div class="why-cards-grid">
+      <div class="why-card-item">
+        <div class="why-card-n">01</div>
+        <div class="why-card-t">Skilled and Innovative Team</div>
+        <p class="why-card-d">Our team includes skilled designers, developers, and marketers who infuse creativity and expertise into every project. We keep abreast of the latest industry trends.</p>
+      </div>
+      <div class="why-card-item">
+        <div class="why-card-n">02</div>
+        <div class="why-card-t">Customized Solutions</div>
+        <p class="why-card-d">We recognize that every business is unique. We invest time in understanding your brand, goals, and target audience to craft personalized solutions that align with your vision.</p>
+      </div>
+      <div class="why-card-item">
+        <div class="why-card-n">03</div>
+        <div class="why-card-t">Customer-Centric Design</div>
+        <p class="why-card-d">Our websites go beyond aesthetics; they are crafted with the user at the forefront. We prioritize intuitive experiences that captivate visitors and foster customer loyalty.</p>
+      </div>
+      <div class="why-card-item">
+        <div class="why-card-n">04</div>
+        <div class="why-card-t">Analytics-Driven Marketing</div>
+        <p class="why-card-d">Our marketing strategies are driven by data and analytics. We continuously analyze and optimize campaigns to maximize return on investment for every client.</p>
+      </div>
+      <div class="why-card-item">
+        <div class="why-card-n">05</div>
+        <div class="why-card-t">Clear and Open Communication</div>
+        <p class="why-card-d">Effective communication is crucial for successful collaborations. We maintain transparency and openness, keeping you informed at every stage of the project.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-list-section">
+    <span class="eyebrow" style="margin-bottom:.8rem;display:flex;">Our Suite of Services</span>
+    <h2 class="section-heading">What We <em>Offer</em></h2>
+    <div class="services-2col">
+      <div class="svc-line-item"><div><h5>Website Design and Development</h5><p>Launch a new site or enhance your current one into a responsive, captivating reality.</p></div></div>
+      <div class="svc-line-item"><div><h5>Website Management</h5><p>Updates, security, and performance optimization keeping your site secure and efficient.</p></div></div>
+      <div class="svc-line-item"><div><h5>Graphic Design</h5><p>Logos, banners, social media graphics, flyers, packaging, and marketing materials.</p></div></div>
+      <div class="svc-line-item"><div><h5>Search Engine Optimization (SEO)</h5><p>Strategic SEO solutions that connect you with your target audience organically.</p></div></div>
+      <div class="svc-line-item"><div><h5>Email Marketing</h5><p>Personalized email campaigns that build relationships and maximize conversions.</p></div></div>
+      <div class="svc-line-item"><div><h5>Content Marketing</h5><p>High-quality content that positions your brand as a leader in your industry.</p></div></div>
+      <div class="svc-line-item"><div><h5>Social Media Marketing</h5><p>Dynamic campaigns that ignite interest and direct traffic to your website.</p></div></div>
+      <div class="svc-line-item"><div><h5>Social Media Management</h5><p>Engaging content, managed interactions, and campaigns that boost brand visibility.</p></div></div>
+      <div class="svc-line-item"><div><h5>Pay-Per-Click (PPC) Advertising</h5><p>Immediate visibility and targeted traffic with optimized campaigns for highest ROI.</p></div></div>
+    </div>
+  </div>
+
+  <div style="padding:5rem 3.5rem;text-align:center;">
+    <h2 class="section-heading" style="max-width:560px;margin:0 auto 1.5rem;">We do not just offer services, we become your <em>partners in success</em></h2>
+    <p style="color:var(--muted);max-width:500px;margin:0 auto 2.5rem;font-size:.92rem;">Let us embark on a digital journey together and unleash your business's full potential.</p>
+    <button class="btn-gold" onclick="showPage('contact')"><span>Contact Us Today</span></button>
+  </div>
+
+</div><div class="page" id="page-contact">
+  <div class="contact-page">
+    <span class="eyebrow" style="margin-bottom:1rem;display:flex;">Get In Touch</span>
+    <h1 class="section-heading" style="font-size:clamp(2.5rem,5vw,4rem);">Let's Start a <em>Conversation</em></h1>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-head">
+          <div class="gold-bar" style="margin-bottom:1.5rem;"></div>
+          <p style="color:var(--muted);font-size:.93rem;line-height:1.9;margin-bottom:2rem;">Ready to elevate your online presence? Reach out through any of the channels below or fill out the enquiry form and we will get back to you promptly.</p>
+        </div>
+        <div class="contact-channels">
+          <a class="ch-btn" href="https://wa.me/8135727203" target="_blank">
+            <span class="ch-icon ch-wa">
+                <img src="whatsapp-icon.png" alt="WhatsApp" width="15" height="15" />
+            </span>
+            WhatsApp
+          </a>
+          <a class="ch-btn" href="mailto:agencyvictorious0@gmail.com">
+            <span class="ch-icon ch-em">
+                <img src="gmail-icon.png" alt="Email" width="15" height="15" />
+            </span>
+            Email
+          </a>
+          <a class="ch-btn" href="https://www.fiverr.com/excellences_" target="_blank">
+            <span class="ch-icon ch-fv">
+              <img src="fiverr-icon.png" alt="Fiverr" width="15" height="15" />
+            </span>
+            </span>
+            Fiverr
+          </a>
+        </div>
+      </div>
+
+      <div class="form-wrap">
+        <span class="eyebrow" style="margin-bottom:1.8rem;display:flex;">Enquiry Form</span>
+        <form class="contact-form" id="cForm">
+          <div class="fld">
+            <div class="fld"><label>First Name</label><input type="text" id="fName" name="first_name" placeholder="Franklin" /></div>
+            <div class="fld"><label>Last Name</label><input type="text" id="lName" name="last_name" placeholder="Saint" /></div>
+          </div>
+          <div class="fld"><label>Email Address</label><input type="email" id="fEmail" name="email" placeholder="franklin@example.com" /></div>
+          <div class="fld"><label>Phone / WhatsApp</label><input type="tel" id="fPhone" name="phone" placeholder="+1 234 567 8900" /></div>
+          <div class="fld">
+            <label>Service Needed</label>
+            <select id="fService" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Website Design and Development</option>
+              <option>Website Management</option>
+              <option>Graphic Design</option>
+              <option>Search Engine Optimization (SEO)</option>
+              <option>Email Marketing</option>
+              <option>Content Marketing</option>
+              <option>Social Media Marketing</option>
+              <option>Social Media Management</option>
+              <option>Pay-Per-Click (PPC) Advertising</option>
+              <option>Digital Marketing Strategy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fld"><label>Website URL (if applicable)</label><input type="url" id="fUrl" name="website" placeholder="https://yourwebsite.com" /></div>
+          <div class="fld"><label>Your Message</label><textarea id="fMsg" name="message" placeholder="Tell us about your project, goals, or questions..."></textarea></div>
+          <div class="form-footer">
+            <span class="form-note">We typically respond within 24 hours.</span>
+            <button type="button" class="btn-gold" onclick="submitEnquiry()"><span>Send Enquiry →</span></button>
+          </div>
+          <div class="form-ok" id="fOk">Thank you for reaching out! We will be in touch with you shortly.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div><footer>
+  <div class="footer-inner">
+    <span class="footer-copy">Copyright ©2026, Victorious. All Rights Reserved.</span>
+    <div class="footer-socials">
+      <a class="soc-btn" href="https://wa.me/8135727203" target="_blank" title="WhatsApp">
+        <img src="whatsapp-icon.png" alt="WhatsApp" width="15" height="15" />
+      </a>
+      <a class="soc-btn" href="mailto:agencyvictorious0@gmail.com" title="Email">
+        <img src="gmail-icon.png" alt="Email" width="15" height="15" />
+      </a>
+      <a class="soc-btn" href="https://www.fiverr.com/excellences_" target="_blank" title="Fiverr">
+        <img src="fiverr-icon.png" alt="Fiverr" width="15" height="15" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  if (window.emailjs && typeof emailjs.init === 'function') {
+    emailjs.init('4WvJZzJ8bjJ9OuzTJ');
+  }
+</script>
+<script src="main.js"></script>
+</body>
+</html>
